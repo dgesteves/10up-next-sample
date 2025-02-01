@@ -1,0 +1,27 @@
+.navigation {
+  display: flex;
+  width: 100%;
+  padding: 20px 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 974px) {
+  .navigation {
+    position: relative;
+    padding: 15px 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    padding: 15px 30px;
+  }
+}
+
+@media (min-width: 1281px) {
+  .navigation {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}

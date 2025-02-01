@@ -1,0 +1,58 @@
+import { memo, SVGProps } from 'react';
+import { DEFAULT_ICON_COLOR, DEFAULT_ICON_SIZE } from '@/constants';
+
+type MusicNotesIconProps = {
+  size?: number;
+  color?: string;
+  title?: string;
+} & SVGProps<SVGSVGElement>;
+
+export const MusicNotesIcon = memo(function MusicNotesIcon({
+  size = DEFAULT_ICON_SIZE,
+  color = DEFAULT_ICON_COLOR,
+  title,
+  ...props
+}: MusicNotesIconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 100 100"
+      fill="none"
+      role={title ? 'img' : 'presentation'}
+      aria-hidden={!title}
+      aria-label={title}
+      {...props}
+    >
+      {title && <title>{title}</title>}
+      <path
+        d="M70.3125 78.125C76.3531 78.125 81.25 73.2281 81.25 67.1875C81.25 61.1469 76.3531 56.25 70.3125 56.25C64.2719 56.25 59.375 61.1469 59.375 67.1875C59.375 73.2281 64.2719 78.125 70.3125 78.125Z"
+        stroke={color}
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M20.3125 90.625C26.3531 90.625 31.25 85.7281 31.25 79.6875C31.25 73.6469 26.3531 68.75 20.3125 68.75C14.2719 68.75 9.375 73.6469 9.375 79.6875C9.375 85.7281 14.2719 90.625 20.3125 90.625Z"
+        stroke={color}
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M81.25 31.25L31.25 43.75"
+        stroke={color}
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M31.25 79.6875V25L81.25 12.5V67.1875"
+        stroke={color}
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+});

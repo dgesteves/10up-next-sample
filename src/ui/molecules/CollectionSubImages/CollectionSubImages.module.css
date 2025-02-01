@@ -1,0 +1,70 @@
+.collectionCardSubImages {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  align-self: stretch;
+  height: 100%;
+}
+
+.collectionCardSubImage {
+  align-self: stretch;
+  width: auto;
+  height: auto;
+  border-radius: 20px;
+  flex: 1 0 0;
+
+  object-fit: cover;
+  object-position: center;
+
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.collectionCardAdditionalImages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+
+  border-radius: 20px;
+  background: var(--color-violet);
+
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    background: color-mix(in srgb, var(--color-violet) 80%, var(--color-white));
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.collectionCardAdditionalImagesText {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+  text-transform: capitalize;
+}
+
+@media (max-width: 974px) {
+  .collectionCardAdditionalImagesText {
+    font-size: 18px;
+    line-height: 140%;
+  }
+}

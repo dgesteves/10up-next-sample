@@ -1,0 +1,49 @@
+.navLinks {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.navLink {
+  display: flex;
+  height: 46px;
+  padding: 0 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  text-wrap: nowrap;
+
+  color: color-mix(in srgb, var(--color-white) 60%, var(--color-gray));
+  border-radius: 20px;
+  transition:
+    border-bottom 0.2s ease,
+    transform 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    border-radius: 0;
+    border-bottom: 2px solid var(--color-violet);
+    transform: scale(1.02);
+    color: var(--color-white);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.navLink[aria-current='page'] {
+  border-bottom: 2px solid var(--color-violet);
+  border-radius: 0;
+  color: var(--color-white);
+}
+
+.buttonText {
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  text-wrap: nowrap;
+}

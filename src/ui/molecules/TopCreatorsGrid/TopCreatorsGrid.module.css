@@ -1,0 +1,175 @@
+.topCreatorsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+}
+
+@media (max-width: 974px) {
+  .topCreatorsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .topCreatorsGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 20px;
+  }
+}
+
+.topCreatorsGridItem {
+  position: relative;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex: 1 0 0;
+
+  cursor: pointer;
+  border-radius: 20px;
+  background: var(--color-slate);
+
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+
+    .topCreatorsGridItemArtistName {
+      color: var(--color-white);
+    }
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+@media (max-width: 974px) {
+  .topCreatorsGridItem {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+.topCreatorsGridItemArtistImage {
+  width: 120px;
+  height: 120px;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 974px) {
+  .topCreatorsGridItemArtistImage {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.topCreatorsGridItemArtistInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  align-self: stretch;
+}
+
+@media (max-width: 974px) {
+  .topCreatorsGridItemArtistInfo {
+    align-items: flex-start;
+    flex: 1 0 0;
+  }
+}
+
+.topCreatorsGridItemArtistName {
+  align-self: stretch;
+  text-align: center;
+
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  text-transform: capitalize;
+
+  color: color-mix(in srgb, var(--color-white) 60%, var(--color-gray));
+}
+
+@media (max-width: 974px) {
+  .topCreatorsGridItemArtistName {
+    text-align: left;
+  }
+}
+
+.topCreatorsGridItemArtistAdditionalInfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 974px) {
+  .topCreatorsGridItemArtistAdditionalInfo {
+    gap: 5px;
+  }
+}
+
+.topCreatorsGridItemArtistTotalSales {
+  color: var(--color-gray);
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+
+  text-wrap: nowrap;
+}
+
+.topCreatorsGridItemArtistTotalValue {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+
+  text-wrap: nowrap;
+}
+
+.topCreatorsGridItemPositionBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+
+  position: absolute;
+  left: 20px;
+  top: 18px;
+
+  border-radius: 20px;
+  background: var(--color-charcoal);
+}
+
+@media (max-width: 974px) {
+  .topCreatorsGridItemPositionBadge {
+    left: 12px;
+    top: 12px;
+  }
+}
+
+.topCreatorsGridItemPositionBadgeText {
+  color: var(--color-gray);
+
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}

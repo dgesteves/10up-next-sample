@@ -1,0 +1,39 @@
+.collectionCard {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+
+  border-radius: 20px;
+  background: var(--color-charcoal);
+}
+
+.collectionCardImagesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  align-self: stretch;
+}
+
+.collectionCardMainImage {
+  align-self: stretch;
+  width: auto;
+  height: auto;
+
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
